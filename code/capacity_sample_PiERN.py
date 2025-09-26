@@ -16,10 +16,15 @@ handle = pynvml.nvmlDeviceGetHandleByIndex(gpu_index)  # 0号GPU
 # 配置
 # -----------------------------
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# please download the model at https://www.modelscope.cn/models/Qwen/Qwen2.5-0.5B-Instruct/files
 BASE_MODEL_PATH = "/data/models/Qwen/Qwen2.5-0.5B-Instruct"
 
+# please download the model at https://huggingface.co/HengBooo233/PiERN/tree/main
 ROUTER_WEIGHTS = "../model/capacity_token_router.pt"                         
-LM13D_WEIGHTS = "../model/capacity_test2computation_module.pt"      
+LM13D_WEIGHTS = "../model/capacity_test2computation_module.pt"   
+
+   
 DEEPONET_WEIGHTS = "../model/capacity_expert_model.pt"
 
 
@@ -201,9 +206,9 @@ def generate_response_with_router(messages, tokenizer, llm_model, device, max_ne
 
 if __name__ == "__main__":
     
-    results_path = "PiERN_1.0B_router_capacity.txt"
+    results_path = "PiERN_1.0B_capacity.txt"
 
-    with open(results_path, "w", encoding="utf-8") as fout, jsonlines.open("../data/capacity_test.jsonl", "r") as reader:
+    with open(results_path, "w", encoding="utf-8") as fout, jsonlines.open("../data/capacity_sample_PiERN.jsonl", "r") as reader:
         for idx, record in enumerate(reader):
             if idx >= 2:   # 👈 限制条数
                 break

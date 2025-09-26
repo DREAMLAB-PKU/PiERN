@@ -15,6 +15,7 @@ import os
 
 
 # 配置路径
+# please download the model at https://www.modelscope.cn/models/Qwen/Qwen2.5-0.5B-Instruct/files
 TOKENIZER_PATH = "/data/models/Qwen/Qwen2.5-0.5B-Instruct"  
 # 加载 tokenizer
 tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_PATH, use_fast=False, trust_remote_code=True)
