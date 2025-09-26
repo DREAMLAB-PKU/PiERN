@@ -19,13 +19,13 @@ We evaluate PiERN on both **linear and nonlinear numerical reasoning tasks**, ag
 
 PiERN offers an **efficient, interpretable, and scalable** paradigm for interfacing language models with scientific systems.
 
-For more details, please refer to our [paper (PDF)](./PiERN.pdf) and project page:  
-👉 https://github.com/DREAMLAB-PKU/PiERN
+📄 For more details, please see and cite our [PiERN Paper (PDF)](./PiERN.pdf).  
+👉 Project page: https://github.com/DREAMLAB-PKU/PiERN
 
 
 ## 🚀 Quick Start
 
-Clone the repository and install dependencies:
+Clone the repository and install dependencies, then enter the code directory and make sure all the required models are downloaded (see the corresponding ./code/*.py files for download instructions)::
 
 ```bash
 git clone https://github.com/DREAMLAB-PKU/PiERN.git
@@ -33,3 +33,4 @@ cd PiERN
 pip install -r requirements.txt
 cd code
 python3 *.py
+
