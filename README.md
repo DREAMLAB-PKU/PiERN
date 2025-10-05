@@ -32,5 +32,5 @@ git clone https://github.com/DREAMLAB-PKU/PiERN.git
 cd PiERN
 pip install -r requirements.txt
 cd code
-python3 *.py
+python3 capacity_sample_PiERN.py
 
